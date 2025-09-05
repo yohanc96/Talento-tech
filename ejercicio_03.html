@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interacción Sencilla</title>
+  <style>
+    /* Estilo para el título h1 */
+    h1 {
+      font-size: 2rem; /* Tamaño grande para que se vea bien */
+      text-align: center; /* Centrado */
+      margin-top: 50px; /* Separar del borde superior */
+      cursor: pointer; /* Cambiar el cursor cuando pases el ratón por encima */
+    }
+
+    /* Estilo para el div donde se muestra el número */
+    #numDiv {
+      text-align: center; /* Centrado */
+      font-size: 2rem; /* Tamaño grande para el número */
+      margin-top: 20px; /* Separación del número y el título */
+    }
+  </style>
+</head>
+<body>
+  <!-- Título que cambia de color cuando el ratón entra -->
+  <h1 id="interactableH1">¡Pasa el ratón o haz doble clic aquí!</h1>
+  
+  <!-- El número que se duplicará cuando hagas doble clic -->
+  <div id="numDiv">2</div>
+
+  <script>
+    // 1. Conseguimos el título (h1) y el div donde aparece el número
+    const h1 = document.getElementById('interactableH1');
+    const numDiv = document.getElementById('numDiv');
+
+    // 2. Cambiar el color cuando el ratón entra al título (h1)
+    h1.addEventListener('mouseenter', () => {
+      h1.style.color = 'red'; // Cambiar el color del texto a rojo
+      h1.style.backgroundColor = 'yellow'; // Cambiar el fondo a amarillo
+    });
+
+    // 3. Volver al color original cuando el ratón sale del título (h1)
+    h1.addEventListener('mouseleave', () => {
+      h1.style.color = ''; // Volver al color original del texto
+      h1.style.backgroundColor = ''; // Volver al color original del fondo
+    });
+
+    // 4. Duplicar el número cuando se hace doble clic en el título (h1)
+    h1.addEventListener('dblclick', () => {
+      let currentNumber = parseInt(numDiv.textContent); // Obtener el número actual del div
+      currentNumber *= 2; // Multiplicar el número por 2 (duplicarlo)
+      numDiv.textContent = currentNumber; // Poner el nuevo número en el div
+    });
+  </script>
+</body>
+</html>

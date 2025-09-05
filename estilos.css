@@ -1,0 +1,121 @@
+/* Fondo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://media.istockphoto.com/id/157739460/es/foto/tiger-pa%C3%ADs.jpg?s=612x612&w=0&k=20&c=bb20iV5ft2i_8bexuDkXzX4PYy9R9ELbTsdVWzde5cw=');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Título */
+.titulo {
+    font-family: "Courier New", monospace;
+    font-style: italic;
+    color: red;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Subtítulo */
+.subtitulo {
+    font-family: Georgia, serif;
+    font-style: oblique;
+    color: orange;
+    text-align: center;
+}
+
+/* Texto principal */
+.parrafo {
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: justify;
+    font-size: 1.1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Subtítulos internos */
+.subtitulos-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 30px auto 10px;
+}
+
+.sub {
+    font-family: Georgia, serif;
+    font-style: oblique;
+    color: black;
+    text-align: justify;
+    border-radius: 8px;
+    padding: 5px 10px;
+    transition: background-color 0.4s ease;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.sub:hover {
+    background-color: #ffe680;
+}
+
+/* Cajas flexibles */
+.cajas-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+/* Estilo común de cajas */
+.caja {
+    flex: 1 1 300px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px gray;
+    box-sizing: border-box;
+    text-align: justify;
+    transition: transform 4s ease;
+}
+
+.caja img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* Animación para imágenes */
+.caja-indira:hover img,
+.caja-madre:hover img,
+.caja-canu:hover img {
+    animation: moverImagen 4s forwards;
+}
+
+@keyframes moverImagen {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.05) rotate(1deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Pie de página */
+.pie-pagina {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.icono-footer {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
